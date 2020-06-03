@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "express": "nodemon express.js"
+  },
+  "name": "france_et_moi",
+  "version": "1.0.0",
+  "main": "express.js",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "nodemon": "^2.0.4",
+    "tailwindcss": "^1.4.6"
+  }
+}

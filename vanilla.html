@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vanilla.js</title>
+  </head>
+  <body>
+    <h1>Vanilla.js</h1>
+
+    <script>
+
+      function foo(cb) {
+        setTimeout(() => {
+          cb('I am worked')
+        }, 1000)
+      }
+
+      foo((it) => console.log(it))
+
+    </script>
+  </body>
+</html>
