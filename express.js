@@ -1,4 +1,5 @@
 const express = require('express')
+const province = require('./lib/province')
 
 require('dotenv').config()
 
@@ -18,16 +19,8 @@ app.use(express.static(__dirname + '/public'))
 
 // Routing
 
-const provinces = [
-    'Aquitaine',
-    'Bretagne',
-    'Normandie'
-]
-
 app.get('/', (req, res) => {
-    const randomProvince =
-        provinces[Math.floor(Math.random() * provinces.length)]
-    res.render('home', { province: randomProvince })
+    res.render('home', { province: province.getProvince })
 })
 app.get('/about', (req, res) => {
     res.render('about')
