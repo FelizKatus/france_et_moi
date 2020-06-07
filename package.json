@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "express": "nodemon express.js"
+    "express": "nodemon express.js",
+    "css": "npx tailwindcss build ./public/styles/main.tailwind.css -o ./public/styles/main.css"
   },
   "name": "france_et_moi",
   "version": "1.0.0",

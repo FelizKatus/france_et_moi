@@ -4,47 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <title>France et Moi</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 
-<body>
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
     <!-- Container -->
     <div class="container mx-auto">
 
         <!-- Navigation -->
-        <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
-                <span class="font-semibold text-xl tracking-tight">France et Moi</span>
-            </div>
-            <div class="block lg:hidden">
-                <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-                </button>
-            </div>
-            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-                <div class="text-sm lg:flex-grow">
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                        Услуги
-                    </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                        Экскурсии
-                    </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                        Виды отдыха
-                    </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                        Цены
-                    </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                        О компании
-                    </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-                        Контакты
-                    </a>
-                </div>
-                <div>
-                    <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</a>
+        <nav class="relative bg-white border-b-2 border-gray-300 text-gray-900">
+            <div class="container mx-auto flex justify-between">
+                <div class="relative block p-4 lg:p-6 text-xl text-blue-600 font-bold">France et Moi</div>
+                    <ul class="flex">
+	
+                        <!--Regular Link-->
+                        <li class="hover:bg-blue-800 hover:text-white">
+                            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold">Домой</a>
+                        </li>
+		  
+                        <!--Hoverable Link-->
+                        <li class="hoverable hover:bg-blue-800 hover:text-white">
+                            <a href="#" class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold hover:bg-blue-800 hover:text-white">Услуги и цены</a>
+                            <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-800">
+                                <div class="container mx-auto w-full flex flex-wrap justify-between mx-2">
+                                    <div class="w-full text-white mb-8">
+                                        <h2 class="font-bold text-2xl">Main Hero Message for the menu section</h2>
+                                        <p>Sub-hero message, not too long and not too short. Make it just right!</p>
+                                    </div>
+                                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                                        <div class="flex items-center">
+                                            <i class="h-8 mb-3 mr-3 fill-current text-white fas fa-camera fa-2x"></i>
+                                            <h3 class="font-bold text-xl text-white text-bold mb-2">Экскурсии</h3>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Аквитания</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Анжу, Пуату, Турень</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Бретань, Нормандия</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Бургундия</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Лион</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Нормандия</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Париж</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Пикардия</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Сердце Франции</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Эльзас</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Шампань</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- p class="text-gray-100 text-sm">Quarterly sales are at an all-time low create spaces to explore the accountable talk and blind vampires.</p>
+                                        <div class="flex items-center py-3">
+                                            <i class="h-6 pr-3 fill-current text-blue-300 far fa-arrow-alt-circle-right fa-2x"></i>
+                                            <a href="#" class="text-white bold border-b-2 border-blue-300 hover:text-blue-300">Find out more...</a>
+                                        </div -->
+                                    </ul>
+                                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                                        <div class="flex items-center">
+                                            <i class="h-8 mb-3 mr-3 fill-current text-white fas fa-couch fa-2x"></i>
+                                            <h3 class="font-bold text-xl text-white text-bold mb-2">Виды отдыха</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Вкусная Франция</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Винные туры</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Семейный отдых во Франции</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Замки Франции</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block p-1 hover:bg-blue-600 text-gray-300 hover:text-white text-sm">Франция для детей</a>
+                                            </li>
+                                        </ul>
+                                        <!-- p class="text-gray-100 text-sm">Prioritize these line items game-plan draw a line in the sand come up with something buzzworthy UX upstream selling.</p>
+                                        <div class="flex items-center py-3">
+                                            <i class="h-6 pr-3 fill-current text-blue-300 far fa-arrow-alt-circle-right fa-2x"></i>
+                                            <a href="#" class="text-white bold border-b-2 border-blue-300 hover:text-blue-300">Find out more...</a>
+                                        </div -->
+                                    </ul>
+                                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+                                        <div class="flex items-center">
+                                            <i class="h-8 mb-3 mr-3 fill-current text-white fas fa-shuttle-van fa-2x"></i>
+                                            <h3 class="font-bold text-xl text-white text-bold mb-2">Трансферы</h3>
+                                        </div>
+                                        <p class="text-gray-100 text-sm">This proposal is a win-win situation which will cause a stellar paradigm shift, let's touch base off-line before we fire the new ux experience.</p>
+                                        <div class="flex items-center py-3">
+                                            <i class="h-6 pr-3 fill-current text-blue-300 far fa-arrow-alt-circle-right fa-2x"></i>
+                                            <a href="#" class="text-white bold border-b-2 border-blue-300 hover:text-blue-300">Find out more...</a>
+                                        </div>
+                                    </ul>
+                                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 pb-6 pt-6 lg:pt-3">
+                                        <div class="flex items-center">
+                                            <i class="h-8 mb-3 mr-3 fill-current text-white fas fa-coins fa-2x"></i>
+                                            <h3 class="font-bold text-xl text-white text-bold mb-2">Цены</h3>
+                                        </div>
+                                        <p class="text-gray-100 text-sm">This is a no-brainer to wash your face, or we need to future-proof this high performance keywords granularity.</p>
+                                        <div class="flex items-center py-3">
+                                            <i class="h-6 pr-3 fill-current text-blue-300 far fa-arrow-alt-circle-right fa-2x"></i>
+                                            <a href="#" class="text-white bold border-b-2 border-blue-300 hover:text-blue-300">Find out more...</a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--Hoverable Link-->
+                        <li class="hoverable hover:bg-blue-800 hover:text-white">
+                            <a href="#" class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold hover:bg-blue-800 hover:text-white">О компании</a>
+                            <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-800">
+                                <div class="container mx-auto w-full flex flex-wrap justify-between mx-2">
+                                    <div class="w-full text-white mb-8">
+                                        <h2 class="font-bold text-2xl">Main Hero Message for the menu section</h2>
+                                        <p>Sub-hero message, not too long and not too short. Make it just right!</p>
+                                    </div>
+                                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                                        <div class="flex items-center">
+                                            <i class="h-8 mb-3 mr-3 fill-current text-white fas fa-rss fa-2x"></i>
+                                            <h3 class="font-bold text-xl text-white text-bold mb-2">Новости</h3>
+                                        </div>
+                                        <p class="text-gray-100 text-sm">Quarterly sales are at an all-time low create spaces to explore the accountable talk and blind vampires.</p>
+                                        <div class="flex items-center py-3">
+                                            <i class="h-6 pr-3 fill-current text-blue-300 far fa-arrow-alt-circle-right fa-2x"></i>
+                                            <a href="#" class="text-white bold border-b-2 border-blue-300 hover:text-blue-300">Find out more...</a>
+                                        </div>
+                                    </ul>
+                                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                                        <div class="flex items-center">
+                                            <i class="h-8 mb-3 mr-3 fill-current text-white fas fa-file-alt fa-2x"></i>
+                                            <h3 class="font-bold text-xl text-white text-bold mb-2">Обязательства</h3>
+                                        </div>
+                                        <p class="text-gray-100 text-sm">Prioritize these line items game-plan draw a line in the sand come up with something buzzworthy UX upstream selling.</p>
+                                        <div class="flex items-center py-3">
+                                            <i class="h-6 pr-3 fill-current text-blue-300 far fa-arrow-alt-circle-right fa-2x"></i>
+                                            <a href="#" class="text-white bold border-b-2 border-blue-300 hover:text-blue-300">Find out more...</a>
+                                        </div>
+                                    </ul>
+                                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+                                        <div class="flex items-center">
+                                            <i class="h-8 mb-3 mr-3 fill-current text-white fas fa-id-badge fa-2x"></i>
+                                            <h3 class="font-bold text-xl text-white text-bold mb-2">Лицензированный гид</h3>
+                                        </div>
+                                        <p class="text-gray-100 text-sm">This proposal is a win-win situation which will cause a stellar paradigm shift, let's touch base off-line before we fire the new ux experience.</p>
+                                        <div class="flex items-center py-3">
+                                            <i class="h-6 pr-3 fill-current text-blue-300 far fa-arrow-alt-circle-right fa-2x"></i>
+                                            <a href="#" class="text-white bold border-b-2 border-blue-300 hover:text-blue-300">Find out more...</a>
+                                        </div>
+                                    </ul>
+                                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 pb-6 pt-6 lg:pt-3">
+                                        <div class="flex items-center">
+                                            <i class="h-8 mb-3 mr-3 fill-current text-white fas fa-comment fa-2x"></i>
+                                            <h3 class="font-bold text-xl text-white text-bold mb-2">Отзывы</h3>
+                                        </div>
+                                        <p class="text-gray-100 text-sm">This is a no-brainer to wash your face, or we need to future-proof this high performance keywords granularity.</p>
+                                        <div class="flex items-center py-3">
+                                            <i class="h-6 pr-3 fill-current text-blue-300 far fa-arrow-alt-circle-right fa-2x"></i>
+                                            <a href="#" class="text-white bold border-b-2 border-blue-300 hover:text-blue-300">Find out more...</a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--Regular Link-->
+                        <li class="hover:bg-blue-800 hover:text-white">
+                            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold">Контакты</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav><!-- /Navigation -->
@@ -67,19 +226,24 @@
         <!-- Footer -->
         <div class="grid grid-cols-3 gap-4">
             <div>
-                <h1>
-                    Телефоны
+                <h1>Телефоны</h1>
+                <p>+(33) 675789803 Евгений</p>
+                <p>+(33) 675789777 Дмитрий</p>
                 </h1>
             </div>
             <div>
-                <h1>
-                    Адрес
-                </h1>
+                <h1>Адрес</h1>
+                <p>
+                    SARL FRANCE ET MOI<br>
+                    66 Avenue des Champs Élysées<br>
+                    75008<br>
+                    Paris FRANCE<br>
+                </p>
             </div>
             <div>
-                <h1>
-                    Карта
-                </h1>
+                <p>
+                    <a href="#">Mentions légales</a>
+                </p>
             </div>
         </div><!-- /Footer -->
 
