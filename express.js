@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/aquitaine', (req, res) => {
-  res.render('aquiteine')
+  res.render('aquitaine')
 })
 app.get('/anjou-poitou-touraine', (req, res) => {
   res.render('anjou-poitou-touraine')
