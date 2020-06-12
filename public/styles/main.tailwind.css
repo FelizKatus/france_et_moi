@@ -1,31 +1,44 @@
 @import "tailwindcss/base";
+
+h1 {
+  @apply  text-3xl text-black;
+}
+
+h2 {
+  @apply  text-2xl text-black;
+}
+
+p {
+  @apply text-gray-700 mb-4;
+}
+
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 /* Mega Menu Styles ---------------------------------------------------------------------------- */
 
 .mega-menu {
-    display: none;
-    left: 0;
-    position: absolute;
-    text-align: left;
-    width: 100%;
+  display: none;
+  left: 0;
+  position: absolute;
+  text-align: left;
+  width: 100%;
 }
 
 /* hoverable Class Styles */
 
 .hoverable {
-    position: static;
+  position: static;
 }
 
 .hoverable > a:after {
-    content: "\25BC";
-    font-size: 10px;
-    padding-left: 6px;
-    position: relative;
-    top: -1px;
+  content: "\25BC";
+  font-size: 10px;
+  padding-left: 6px;
+  position: relative;
+  top: -1px;
 }
 
 .hoverable:hover .mega-menu {
-    display: block;
+  display: block;
 }

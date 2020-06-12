@@ -31,8 +31,8 @@
                         <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-800">
                             <div class="container mx-auto w-full flex flex-wrap justify-between mx-2">
                                 <div class="w-full text-white mb-8">
-                                    <h2 class="font-bold text-2xl">Main Hero Message for the menu section</h2>
-                                    <p>Sub-hero message, not too long and not too short. Make it just right!</p>
+                                    <h2 class="font-bold text-2xl text-white">Main Hero Message for the menu section</h2>
+                                    <div class="base-text text-white">Sub-hero message, not too long and not too short. Make it just right!</div>
                                 </div>
                                 <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                                     <div class="flex items-center">
@@ -148,8 +148,8 @@
                         <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-800">
                             <div class="container mx-auto w-full flex flex-wrap justify-between mx-2">
                                 <div class="w-full text-white mb-8">
-                                    <h2 class="font-bold text-2xl">Main Hero Message for the menu section</h2>
-                                    <p>Sub-hero message, not too long and not too short. Make it just right!</p>
+                                    <h2 class="font-bold text-2xl text-white">Main Hero Message for the menu section</h2>
+                                    <div class="text-white">Sub-hero message, not too long and not too short. Make it just right!</div>
                                 </div>
                                 <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                                     <div class="flex items-center">
@@ -209,12 +209,12 @@
 
         <!-- Banner -->
         <div class="flex">
-            {{{ province }}}
+            {{{ slide }}}
         </div><!-- /Banner -->
 
         <!-- Content -->
         <div class="flex grid grid-cols-3 gap-4">
-            <div class="col-span-2">
+            <div class="col-span-2 m-4">
                 {{{ body }}}
             </div>
             <div>
@@ -223,8 +223,8 @@
                     <div class="text-center md:text-left">
                         <h2 class="text-lg">Евгений Пепеляев</h2>
                         <div class="text-purple-500">Трансферы</div>
-                        <div class="text-gray-600">info@frmoi.fr</div>
-                        <div class="text-gray-600">+(33) 675 789 803 </div>
+                        <div class="text-gray-700">info@frmoi.fr</div>
+                        <div class="text-gray-700">+(33) 675 789 803 </div>
                     </div>
                 </div>
 
@@ -233,15 +233,15 @@
                     <div class="text-center md:text-left">
                         <h2 class="text-lg">Дмитрий Мисуркин</h2>
                         <div class="text-purple-500">Экскурсии</div>
-                        <div class="text-gray-600">info@frmoi.fr</div>
-                        <div class="text-gray-600">+(33) 675 789 777</div>
+                        <div class="text-gray-700">info@frmoi.fr</div>
+                        <div class="text-gray-700">+(33) 675 789 777</div>
                     </div>
                 </div>
 
                 <div class="max-w-sm rounded-lg overflow-hidden shadow-lg m-4">
                     <img class="w-full" src="/images/card-top.jpg" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                        <div class="text-xl mb-2">The Coldest Sunset</div>
                         <p class="text-gray-700 text-base">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
                         </p>
@@ -258,8 +258,8 @@
                         <img class="h-12 w-12" src="/images/whatsapp.svg" alt="WhatsApp">
                     </div>
                     <div class="ml-6 pt-1">
-                        <h4 class="text-xl text-gray-900 leading-tight">WhatsApp</h4>
-                        <p class="text-base text-gray-600 leading-normal">Мы всегда на линии!</p>
+                        <h4 class="text-xl text-black leading-tight">WhatsApp</h4>
+                        <p class="text-base text-gray-700 leading-normal">Мы всегда на линии!</p>
                         <div class="mt-4">
                             <button class="text-purple-500 hover:text-white hover:bg-purple-500 border border-purple-500 text-xs font-semibold rounded-full px-4 py-1 leading-normal">Отправить сообщение</button>
                         </div>
@@ -269,28 +269,28 @@
         </div><!-- /Content -->
 
         <!-- Footer -->
-        <div class="flex bg-blue-800 text-white grid grid-cols-3 gap-4">
+        <div class="flex bg-blue-800 text-white grid grid-cols-3 gap-4 p-4">
             <div>
-                <p>
-                    <a href="/news">Новости</a>
-                </p>
-                <p>
-                    <a href="/obligations">Обязательства</a>
-                </p>
-                <p>
-                    <a href="/licensed-guide">Лицензированный гид</a>
-                </p>
-                <p>
-                    <a href="/reviews">Отзывы</a>
-                </p>
+                <div class="text-white">
+                    <i class="fas fa-caret-right"></i> <a href="/news">Новости</a>
+                </div>
+                <div class="text-white">
+                    <i class="fas fa-caret-right"></i> <a href="/obligations">Обязательства</a>
+                </div>
+                <div class="text-white">
+                    <i class="fas fa-caret-right"></i> <a href="/licensed-guide">Лицензированный гид</a>
+                </div>
+                <div class="text-white">
+                    <i class="fas fa-caret-right"></i> <a href="/reviews">Отзывы</a>
+                </div>
             </div>
             <div>
-                <p>
-                    <a href="/contact">Контакты</a>
-                </p>
-                <p>
-                    <a href="/legal-notice">Mentions légales</a>
-                </p>
+                <div class="text-white">
+                    <i class="fas fa-caret-right"></i> <a href="/contact">Контакты</a>
+                </div>
+                <div class="text-white">
+                    <i class="fas fa-caret-right"></i> <a href="/legal-notice">Mentions légales</a>
+                </div>
             </div>
             <div>
             </div>

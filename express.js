@@ -1,6 +1,6 @@
 const express = require('express')
 const handlebars = require('express-handlebars').create({ defaultLayout: 'main' })
-const province = require('./lib/province')
+const slide = require('./lib/slider')
 
 require('dotenv').config()
 
@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '/public'))
 // Routing
 
 app.get('/', (req, res) => {
-  res.render('home', { province: province.getProvince })
+  res.render('home', { slide: slide.getSlide })
 })
 
 app.get('/aquitaine', (req, res) => {
