@@ -12,6 +12,10 @@ p {
   @apply text-gray-700 mb-4;
 }
 
+li {
+  @apply text-gray-700;
+}
+
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
