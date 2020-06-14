@@ -1,9 +1,10 @@
 # France et Moi
 
-**France et Moi** se desarrolla con las siguientes fantasticas tecnologías:
+**France et Moi** es una web de agencia de viajes. Se desarrolla con las siguientes fantasticas tecnologías:
 
 * Tailwind
 * Node/Express
+* Handlebars
 
 #### Licensia:
 
