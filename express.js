@@ -56,6 +56,9 @@ app.get('/champagne', (req, res) => {
   res.render('champagne')
 })
 
+app.get('/excursion-programs', (req, res) => {
+  res.render('excursion-programs')
+})
 app.get('/tasty-france', (req, res) => {
   res.render('tasty-france')
 })
