@@ -12,6 +12,9 @@ Eres libre y tienes derecho de hacer todo lo que quieres.
 
 #### Pantallas:
 
+Index ->
+![Index](screenshots/index.png "Index")
+
 Mega Menu ->
 ![Mega Menu](screenshots/mega_menu.png "Mega Menu")
 
