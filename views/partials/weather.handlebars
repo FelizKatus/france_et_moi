@@ -1,0 +1,18 @@
+<div class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl m-4">
+  <div class="grid grid-cols-1 w-full">
+    {{#each partials.weatherContext.locations}}
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <img class="h-12 w-12" src="{{iconUrl}}" alt="{{weather}}">
+        </div>
+        <div class="ml-6 pt-1">
+          <h4 class="text-xl text-black leading-tight">{{name}}</h4>
+          <a href="{{forecastUrl}}">
+            <p class="text-base text-gray-700 leading-normal">{{weather}}, {{temp}}</p>
+          </a>
+        </div>
+      </div>
+    {{/each}}
+    <small><a href="http://www.wunderground.com" target="blank">Weather Underground</a></small>
+  </div>
+</div>

@@ -1,25 +1,36 @@
 const express = require('express')
 const handlebars = require('express-handlebars').create({ defaultLayout: 'main' })
-const slide = require('./lib/slider')
+const { getSlide } = require('./lib/slider')
+const { getInstagram } = require('./lib/instagram')
+const { getWeather } = require('./lib/weather')
 
 require('dotenv').config()
 
 const app = express()
 const PORT = process.env.PORT || 8080
 
-// Handlevars
+// Handlebars
 
 app.engine('handlebars', handlebars.engine)
 app.set('view engine', 'handlebars')
 
 // Static resources
 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(`${__dirname}/public`))
+
+// Instagram, Weather
+
+app.use((req, res, next) => {
+  if (!res.locals.partials) res.locals.partials = {}
+  res.locals.partials.weatherContext = getWeather()
+  res.locals.partials.instagramContext = getInstagram()
+  next()
+})
 
 // Routing
 
 app.get('/', (req, res) => {
-  res.render('home', { slide: slide.getSlide })
+  res.render('home', { slide: getSlide })
 })
 
 app.get('/aquitaine', (req, res) => {

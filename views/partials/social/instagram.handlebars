@@ -1,0 +1,16 @@
+<div class="max-w-sm rounded-lg overflow-hidden shadow-lg m-4">
+  {{#each partials.instagramContext.images}}
+    <img class="w-full" src="{{imageUrl}}" alt="{{title}}">
+    <div class="px-6 py-4">
+        <div class="text-xl mb-2">{{title}}</div>
+        <p class="text-gray-700 text-base">
+          {{body}}
+        </p>
+    </div>
+    <div class="px-6 py-4">
+        {{#each tags}}
+          <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#{{.}}</span>
+        {{/each}}
+    </div>
+  {{/each}}
+</div>
