@@ -110,6 +110,10 @@ app.get('/contact', (req, res) => {
   res.render('contact')
 })
 
+app.get('/login', (req, res) => {
+  res.render('login', { layout: null })
+})
+
 app.get('/legal-notice', (req, res) => {
   res.render('legal-notice')
 })
