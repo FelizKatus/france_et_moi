@@ -594,15 +594,16 @@ video {
 h1 {
   font-size: 1.875rem;
   --text-opacity: 1;
-  color: #000;
-  color: rgba(0, 0, 0, var(--text-opacity));
+  color: #1a202c;
+  color: rgba(26, 32, 44, var(--text-opacity));
+  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 1.5rem;
   --text-opacity: 1;
-  color: #000;
-  color: rgba(0, 0, 0, var(--text-opacity));
+  color: #1a202c;
+  color: rgba(26, 32, 44, var(--text-opacity));
 }
 
 p {

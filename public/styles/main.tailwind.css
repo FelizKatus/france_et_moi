@@ -1,11 +1,11 @@
 @import "tailwindcss/base";
 
 h1 {
-  @apply  text-3xl text-black;
+  @apply text-3xl text-gray-900 mb-4;
 }
 
 h2 {
-  @apply  text-2xl text-black;
+  @apply text-2xl text-gray-900;
 }
 
 p {
