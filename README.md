@@ -5,6 +5,7 @@
 * Tailwind
 * Node/Express
 * Handlebars
+* MongoDB
 
 #### Licensia:
 
