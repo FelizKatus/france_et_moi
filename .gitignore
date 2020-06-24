@@ -10,6 +10,7 @@ yarn-error.log
 
 # Environment
 .env
+credentials.js
 
 # EDU
 edu

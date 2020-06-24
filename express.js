@@ -1,5 +1,6 @@
 const express = require('express')
 const handlebars = require('express-handlebars').create({ defaultLayout: 'main' })
+const credentials = require('./credentials.js')
 const { getSlide } = require('./lib/slider')
 const { getInstagram } = require('./lib/instagram')
 const { getWeather } = require('./lib/weather')
