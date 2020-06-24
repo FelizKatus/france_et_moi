@@ -14,9 +14,10 @@ const PORT = process.env.PORT || 8080
 app.engine('handlebars', handlebars.engine)
 app.set('view engine', 'handlebars')
 
-// Static resources
+// Static resources and URL encoding
 
 app.use(express.static(`${__dirname}/public`))
+app.use(require('body-parser').urlencoded({ extended: true }))
 
 // Instagram, Weather
 
@@ -109,13 +110,26 @@ app.get('/reviews', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
+app.post('/contact', (req, res) => {
+  console.log(req.body.name)
+  console.log(req.body.email)
+  console.log(req.body.message)
 
-app.get('/login', (req, res) => {
-  res.render('login', { layout: null })
+  res.redirect(303, '/thank-you')
+})
+
+app.get('/thank-you', (req, res) => {
+  res.render('thank-you')
 })
 
 app.get('/legal-notice', (req, res) => {
   res.render('legal-notice')
+})
+
+// Admin
+
+app.get('/login', (req, res) => {
+  res.render('login', { layout: null })
 })
 
 // Middleware
