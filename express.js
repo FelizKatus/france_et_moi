@@ -29,6 +29,17 @@ app.use((req, res, next) => {
   next()
 })
 
+// Cookies, Sessions
+
+app.use(require('cookie-parser')(credentials.cookieSecret))
+app.use(
+  require('express-session')({
+    resave: false,
+    saveUninitialized: false,
+    secret: credentials.cookieSecret
+  })
+)
+
 // Routing
 
 app.get('/', (req, res) => {
@@ -133,7 +144,7 @@ app.get('/login', (req, res) => {
   res.render('login', { layout: null })
 })
 
-// Middleware
+// Errors
 
 app.use((req, res) => {
   res.status(404)
