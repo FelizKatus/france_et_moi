@@ -2,10 +2,14 @@
 
 **France et Moi** es una web de agencia de viajes personalizados. Se desarrolla con las siguientes fantasticas tecnologías:
 
-* Tailwind
 * Node/Express
-* Handlebars
 * MongoDB
+* Handlebars
+* Tailwind
+
+#### De la caja:
+
+* Validación de formularios del lado del cliente y del servidor
 
 #### Licensia:
 

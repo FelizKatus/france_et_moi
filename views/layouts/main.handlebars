@@ -318,9 +318,30 @@
         </div><!-- /Slider -->
 
         <!-- Content -->
-        <div class="flex grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-3 gap-4">
             <div class="col-span-2 m-4">
-                {{{body}}}
+              <!-- Flash -->
+              {{#if flash}}
+                <div class="bg-blue-100 border-t-4 border-blue-300 rounded-b-lg px-4 py-3 shadow-md" role="alert">
+                  <div class="flex">
+                    <div class="py-1">
+                      <svg class="fill-current h-6 w-6 text-blue-300 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="font-bold text-blue-800">
+                        {{flash.intro}}
+                      </p>
+                      <p class="text-sm">
+                        {{flash.message}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              {{/if}}<!-- /Flash -->
+
+              {{{body}}}
             </div>
             <div>
                 <div class="md:flex bg-white rounded-lg p-6 shadow-lg m-4">

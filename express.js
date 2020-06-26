@@ -15,9 +15,12 @@ const PORT = process.env.PORT || 8080
 app.engine('handlebars', handlebars.engine)
 app.set('view engine', 'handlebars')
 
-// Static resources and URL encoding
+// Static resources
 
 app.use(express.static(`${__dirname}/public`))
+
+// URL encoding
+
 app.use(require('body-parser').urlencoded({ extended: true }))
 
 // Instagram, Weather
@@ -39,6 +42,14 @@ app.use(
     secret: credentials.cookieSecret
   })
 )
+
+// Flash
+
+app.use((req, res, next) => {
+  res.locals.flash = req.session.flash
+  delete req.session.flash
+  next()
+})
 
 // Routing
 
@@ -119,15 +130,37 @@ app.get('/reviews', (req, res) => {
   res.render('reviews')
 })
 
+// The following JavaScript- and Perl-compatible regular expression
+// is an implementation of the above definition
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
+const VALID_EMAIL_REGEXP = new RegExp(
+  '^[a-zA-Z0-9.!#$%&\'*+\/=?^_`{|}~-]+@' +
+  '[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?' +
+  '(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$'
+)
 app.post('/contact', (req, res) => {
+  const name = req.body.name || ''
+  const email = req.body.email || ''
+
+  if (!email.match(VALID_EMAIL_REGEXP)) {
+    req.session.flash = {
+      intro: 'Ошибка проверки!',
+      message: 'Указан некорректный адрес электронной почты.'
+    }
+  } else {
+    req.session.flash = {
+      intro: 'Спасибо!',
+      message: 'Ваше письмо успешно отправлено.'
+    }
+  }
+
   console.log(req.body.name)
   console.log(req.body.email)
   console.log(req.body.message)
 
-  res.redirect(303, '/thank-you')
+  return res.redirect(303, '/contact')
 })
 
 app.get('/thank-you', (req, res) => {
