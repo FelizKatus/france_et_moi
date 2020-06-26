@@ -141,7 +141,7 @@ const VALID_EMAIL_REGEXP = new RegExp(
   '(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$'
 )
 app.post('/contact', (req, res) => {
-  const name = req.body.name || ''
+  // const name = req.body.name || ''
   const email = req.body.email || ''
 
   if (!email.match(VALID_EMAIL_REGEXP)) {

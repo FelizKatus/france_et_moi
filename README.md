@@ -32,5 +32,8 @@ Full size image ->
 Contact ->
 ![Contact](screenshots/contact.png "Contact")
 
+Flash messages ->
+![Contact](screenshots/contact-flash.png "Contact")
+
 Login ->
 ![Login](screenshots/login.png "Login")
