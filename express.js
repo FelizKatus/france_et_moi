@@ -8,6 +8,9 @@ const { getWeather } = require('./lib/weather')
 require('dotenv').config()
 
 const app = express()
+
+// Environment
+
 const PORT = process.env.PORT || 8080
 
 // Handlebars
@@ -15,7 +18,7 @@ const PORT = process.env.PORT || 8080
 app.engine('handlebars', handlebars.engine)
 app.set('view engine', 'handlebars')
 
-// Static resources
+// Static
 
 app.use(express.static(`${__dirname}/public`))
 
@@ -101,7 +104,7 @@ app.get('/wine-tours', (req, res) => {
   res.render('wine-tours')
 })
 app.get('/family-holidays-in-france', (req, res) => {
-  res.render('/family-holidays-in-france')
+  res.render('family-holidays-in-france')
 })
 app.get('/castles-of-france', (req, res) => {
   res.render('castles-of-france')
