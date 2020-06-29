@@ -1,5 +1,7 @@
 const express = require('express')
 const path = require('path')
+const bodyParser = require('body-parser')
+const nodemailer = require('nodemailer')
 const handlebars = require('express-handlebars').create({ defaultLayout: 'main' })
 const credentials = require('./credentials')
 const { getSlide } = require('./lib/slider')
@@ -25,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // URL encoding
 
-app.use(require('body-parser').urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // Instagram, Weather
 
@@ -146,30 +148,64 @@ const VALID_EMAIL_REGEXP = new RegExp(
     '(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$'
 )
 app.post('/contact', (req, res) => {
-  // const name = req.body.name || ''
-  const email = req.body.email || ''
+  const mailTransport = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: credentials.gmail.user,
+      pass: credentials.gmail.password
+    }
+  })
 
-  if (!email.match(VALID_EMAIL_REGEXP)) {
-    req.session.flash = {
-      intro: 'Ошибка проверки!',
-      message: 'Указан некорректный адрес электронной почты.'
-    }
-  } else {
-    req.session.flash = {
-      intro: 'Спасибо!',
-      message: 'Ваше письмо успешно отправлено.'
-    }
+  const mailOptions = {
+    from: 'Contact Form <do-not-reply@gmail.com>',
+    to: 'felizkatus@gmail.com',
+    subject: 'Contact Form Submission',
+    html:
+      '<p>You have submission the following details...</p><p><strong>Name:</strong> ' + req.body.name +
+      '</p><p><strong>Email:</strong> ' + req.body.email +
+      '</p><p><strong>Message:</strong> ' + req.body.message + '</p>',
+    generateTextFromHtml: true
   }
 
-  console.log(req.body.name)
-  console.log(req.body.email)
-  console.log(req.body.message)
+  if (req.body.human) {
+    console.log('true')
 
-  return res.redirect(303, '/contact')
-})
+    if (!req.body.email.match(VALID_EMAIL_REGEXP)) {
+      req.session.flash = {
+        intro: 'Ошибка проверки!',
+        message: 'Указан некорректный адрес электронной почты.'
+      }
+      res.redirect(303, '/contact')
+    }
 
-app.get('/thank-you', (req, res) => {
-  res.render('thank-you')
+    mailTransport.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log('Message could not be sent: ' + error)
+
+        req.session.flash = {
+          intro: 'Ошибка отправки!',
+          message: 'Во время отправки письма произошла ошибка.'
+        }
+        res.redirect(303, '/contact')
+      } else {
+        console.log('Message sent: ' + info.response)
+
+        req.session.flash = {
+          intro: 'Спасибо!',
+          message: 'Ваше письмо успешно отправлено.'
+        }
+        res.redirect(303, '/contact')
+      }
+    })
+  } else {
+    console.log('false')
+
+    req.session.flash = {
+      intro: 'Ошибка проверки!',
+      message: 'Подтвердите, что Вы не робот.'
+    }
+    res.redirect(303, '/contact')
+  }
 })
 
 app.get('/legal-notice', (req, res) => {
