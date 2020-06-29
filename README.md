@@ -1,6 +1,6 @@
 # France et Moi
 
-**France et Moi** es una web de agencia de viajes personalizados. Se desarrolla con las siguientes fantasticas tecnologías:
+**France et Moi** es la web de agencia de viajes personalizados. Se desarrolla con las siguientes fantasticas tecnologías:
 
 * Node/Express
 * MongoDB
@@ -10,6 +10,31 @@
 #### De la caja:
 
 * Validación de formularios del lado del cliente y del servidor
+* Protección del SPAM
+
+#### Como arrancar
+
+<code>yarn</code>
+
+<code>yarn run app</code>
+
+Para recibir los correos a su cuenta de Google hay que permitir el acceso de aplicaciones poco seguras:
+
+<a href="https://myaccount.google.com/lesssecureapps" target="_blank">
+  https://myaccount.google.com/lesssecureapps
+</a>
+
+También es necesario crear el fichero <code>credentials.js</code> con el siguiente contenido:
+
+<code>
+  module.exports = {
+    cookieSecret: 'frase secreta',
+    gmail: {
+      user: 'su correo de Gmail',
+      password: 'su contraseña de Gmail'
+    }
+  }
+</code>
 
 #### Licensia:
 

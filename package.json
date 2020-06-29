@@ -1,12 +1,14 @@
 {
   "scripts": {
-    "express": "nodemon express.js",
+    "app": "nodemon app.js",
     "buildcss": "npx tailwindcss build ./public/styles/main.tailwind.css -o ./public/styles/main.css"
   },
   "name": "france_et_moi",
   "version": "1.0.0",
-  "main": "express.js",
+  "description": "France et Moi",
+  "autor": "Feliz Katus",
   "license": "MIT",
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
@@ -15,7 +17,6 @@
     "express-handlebars": "^4.0.4",
     "express-session": "^1.17.1",
     "mongoose": "^5.9.19",
-    "nodemailer": "^6.4.10",
     "nodemon": "^2.0.4",
     "tailwindcss": "^1.4.6"
   },

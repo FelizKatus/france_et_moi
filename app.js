@@ -1,7 +1,6 @@
 const express = require('express')
 const handlebars = require('express-handlebars').create({ defaultLayout: 'main' })
 const credentials = require('./credentials')
-const emailService = require('./lib/email')(credentials)
 const { getSlide } = require('./lib/slider')
 const { getInstagram } = require('./lib/instagram')
 const { getWeather } = require('./lib/weather')
@@ -136,13 +135,14 @@ app.get('/reviews', (req, res) => {
 
 // The following JavaScript- and Perl-compatible regular expression
 // is an implementation of the above definition
+// https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
 const VALID_EMAIL_REGEXP = new RegExp(
-  '^[a-zA-Z0-9.!#$%&\'*+\/=?^_`{|}~-]+@' +
-  '[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?' +
-  '(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$'
+  "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@" +
+    '[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?' +
+    '(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$'
 )
 app.post('/contact', (req, res) => {
   // const name = req.body.name || ''
