@@ -18,7 +18,8 @@
     "express-session": "^1.17.1",
     "mongoose": "^5.9.19",
     "nodemailer": "^6.4.10",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@tailwindcss/custom-forms": "^0.2.1",

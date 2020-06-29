@@ -21,6 +21,19 @@ const PORT = process.env.PORT || 8080
 app.engine('handlebars', handlebars.engine)
 app.set('view engine', 'handlebars')
 
+// Logging
+
+switch (app.get('env')) {
+  case 'development':
+    app.use(require('morgan')('dev'))
+    break
+  case 'production':
+    // https://github.com/joehewitt/express-logger
+    // app.use(require('express-logger')({ path: path.join(__dirname, '/log/requests.log') }))
+    break
+  default:
+}
+
 // Static
 
 app.use(express.static(path.join(__dirname, 'public')))
