@@ -6,7 +6,7 @@
   "name": "france_et_moi",
   "version": "1.0.0",
   "description": "France et Moi",
-  "autor": "Feliz Katus",
+  "author": "Feliz Katus",
   "license": "MIT",
   "main": "app.js",
   "dependencies": {
@@ -17,10 +17,10 @@
     "express-handlebars": "^4.0.4",
     "express-session": "^1.17.1",
     "mongoose": "^5.9.19",
-    "nodemon": "^2.0.4",
-    "tailwindcss": "^1.4.6"
+    "nodemon": "^2.0.4"
   },
   "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -31,6 +31,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "prettier": "^2.0.5",
-    "prettier-babel": "^1.0.0"
+    "prettier-babel": "^1.0.0",
+    "tailwindcss": "^1.4.6"
   }
 }
