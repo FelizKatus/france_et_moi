@@ -14,9 +14,10 @@
 
 #### Como arrancar
 
-<code>yarn</code>
-
-<code>yarn run app</code>
+<pre><code>
+  yarn
+  yarn run app
+</code></pre>
 
 Para recibir los correos a su cuenta de Google hay que permitir el acceso de aplicaciones poco seguras:
 
@@ -26,7 +27,7 @@ Para recibir los correos a su cuenta de Google hay que permitir el acceso de apl
 
 También es necesario crear el fichero <code>credentials.js</code> con el siguiente contenido:
 
-<code>
+<pre><code>
   module.exports = {
     cookieSecret: 'frase secreta',
     gmail: {
@@ -34,7 +35,7 @@ También es necesario crear el fichero <code>credentials.js</code> con el siguie
       password: 'su contraseña de Gmail'
     }
   }
-</code>
+</code></pre>
 
 #### Licensia:
 

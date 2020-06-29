@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const handlebars = require('express-handlebars').create({ defaultLayout: 'main' })
 const credentials = require('./credentials')
 const { getSlide } = require('./lib/slider')
@@ -20,7 +21,7 @@ app.set('view engine', 'handlebars')
 
 // Static
 
-app.use(express.static(`${__dirname}/public`))
+app.use(express.static(path.join(__dirname, 'public')))
 
 // URL encoding
 
