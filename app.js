@@ -160,10 +160,10 @@ app.post('/contact', (req, res) => {
     from: 'Contact Form <do-not-reply@gmail.com>',
     to: 'felizkatus@gmail.com',
     subject: 'Contact Form Submission',
-    html:
-      '<p>You have submission the following details...</p><p><strong>Name:</strong> ' + req.body.name +
-      '</p><p><strong>Email:</strong> ' + req.body.email +
-      '</p><p><strong>Message:</strong> ' + req.body.message + '</p>',
+    html: `<p>You have submission the following details...</p>
+          <p><strong>Name:</strong> ${req.body.name}</p>
+          <p><strong>Email:</strong> ${req.body.email}</p>
+          <p><strong>Message:</strong> ${req.body.message}</p>`,
     generateTextFromHtml: true
   }
 
@@ -180,7 +180,7 @@ app.post('/contact', (req, res) => {
 
     mailTransport.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.log('Message could not be sent: ' + error)
+        console.log(`Message could not be sent: ${error}`)
 
         req.session.flash = {
           intro: 'Ошибка отправки!',
@@ -188,7 +188,7 @@ app.post('/contact', (req, res) => {
         }
         res.redirect(303, '/contact')
       } else {
-        console.log('Message sent: ' + info.response)
+        console.log(`Message sent: ${info.response}`)
 
         req.session.flash = {
           intro: 'Спасибо!',
@@ -230,4 +230,6 @@ app.use((err, req, res) => {
   res.render('500')
 })
 
-app.listen(PORT)
+app.listen(PORT, () => {
+  console.log(`Server started in ${app.get('env')} mode at http://localhost: ${PORT}`)
+})
