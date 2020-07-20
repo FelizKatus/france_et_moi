@@ -25,7 +25,9 @@ app.set('view engine', 'handlebars')
 
 switch (app.get('env')) {
   case 'development':
+    /* eslint-disable global-require */
     app.use(require('morgan')('dev'))
+    /* eslint-enable global-require */
     break
   case 'production':
     // https://github.com/joehewitt/express-logger
@@ -61,6 +63,16 @@ app.use(
     secret: credentials.cookieSecret
   })
 )
+
+// CSURF
+
+app.use(require('csurf')())
+
+app.use((req, res, next) => {
+  // eslint-disable-next-line no-underscore-dangle
+  res.locals._csrfToken = req.csrfToken()
+  next()
+})
 
 // Flash
 
@@ -244,5 +256,5 @@ app.use((err, req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`Server started in ${app.get('env')} mode at http://localhost: ${PORT}`)
+  console.log(`Server started in ${app.get('env')} mode at http://localhost:${PORT}`)
 })
