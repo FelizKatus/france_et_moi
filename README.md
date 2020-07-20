@@ -11,6 +11,8 @@
 
 * Validación de formularios del lado del cliente y del servidor
 * Protección del SPAM
+* Protección del CSRF
+* Mensajes flash
 
 #### Como arrancar
 
